@@ -153,7 +153,7 @@ class rosee extends eqLogic {
 	$dpr=$this->getConfiguration('DPR');
 	if ($dpr == '') {
 		//valeur par défaut du seuil d'alerte rosée = 2°C
-		$dpr=2;
+		$dpr=2.0;
 	}   
 	log::add('rosee', 'debug', 'Configuration : seuil DPR ' . $dpr);
 	
@@ -172,9 +172,12 @@ class rosee extends eqLogic {
 	
 	/*
 	// valeurs pour test, l'indice de chaleur doit Ãªtre de 53Â°C...
-	$temperature = 5.4;
+	$temperature = 7;
 	$humidite = 98.0;
-	$pression = 1033.24;
+	$pression = 1032.4;
+	log::add('rosee', 'debug', 'temperature ' . $temperature);
+	log::add('rosee', 'debug', 'humidite ' . $humidite);
+	log::add('rosee', 'debug', 'pression  ' . $pression);
 	*/
 	
 	/* calcul du point de rosee
@@ -219,8 +222,8 @@ class rosee extends eqLogic {
 	log::add('rosee', 'debug', 'visibleFrost ' . $visibleFrost);
 
 	// Calcul des alertes rosée et givrage en fonction du seuil d'alerte
-	if ($VisibleRosee == 1) {
-		if(($temperature - $rosee) <= $dpr) {
+	if ($visibleRosee == 1) {
+		if (($temperature - $rosee) <= $dpr) {
 			$alert_r = 1;
 		} else {
 			$alert_r = 0;
@@ -229,7 +232,7 @@ class rosee extends eqLogic {
 		$alert_r = 0;
 	}
 		
-	if ($VisibleFrost == 1) {
+	if ($visibleFrost == 1) {
 		if (($temperature - $frost) <= $dpr) {
 			$alert_g = 1;
 		} else {
@@ -250,7 +253,7 @@ class rosee extends eqLogic {
 	$humi_a_m3 = 1000.0 * $humi_a * $p;									// Humidité absolue en gr / m3
 
 	foreach ($this->getCmd() as $cmd) {
-		if($cmd->getConfiguration('data')=="rosee"){
+		if ($cmd->getConfiguration('data')=="rosee"){
 			$cmd->setConfiguration('value', $rosee);
 			$cmd->setIsVisible($visibleRosee);
 			$cmd->save();
@@ -258,7 +261,7 @@ class rosee extends eqLogic {
 			log::add('rosee', 'debug', 'Rosée ' . $rosee);
 		}
 				
-		if($cmd->getConfiguration('data')=="frost"){
+		if ($cmd->getConfiguration('data')=="frost"){
 			$cmd->setConfiguration('value', $frost);
 			$cmd->setIsVisible($visibleFrost);
 			$cmd->save();
@@ -266,7 +269,7 @@ class rosee extends eqLogic {
 			log::add('rosee', 'debug', 'Givrage ' . $frost);
 		}
 				
-		if($cmd->getConfiguration('data')=="humidite_a"){
+		if ($cmd->getConfiguration('data')=="humidite_a"){
 			$cmd->setConfiguration('value', $humi_a_m3);
 			$cmd->save();
 			$cmd->event($humi_a_m3);
@@ -280,7 +283,7 @@ class rosee extends eqLogic {
 			log::add('rosee', 'debug', 'Humidite Absolue ' . $humi_a_m3);
 		}
 				
-		if($cmd->getConfiguration('data')=="alert_r"){
+		if ($cmd->getConfiguration('data')=="alert_r"){
 			$old_alert_r = $cmd->execCmd();
 			log::add('rosee', 'debug', 'old Alerte rosée ' . $old_alert_r);
 			$cmd->setConfiguration('value', $alert_r);
@@ -292,7 +295,7 @@ class rosee extends eqLogic {
 			log::add('rosee', 'debug', 'Alerte rosée ' . $alert_r);
 		}
 				
-		if($cmd->getConfiguration('data')=="alert_g"){
+		if ($cmd->getConfiguration('data')=="alert_g"){
 			$old_alert_g = $cmd->execCmd();
 			log::add('rosee', 'debug', 'old Alerte givrage ' . $old_alert_g);
 			$cmd->setConfiguration('value', $alert_g);
