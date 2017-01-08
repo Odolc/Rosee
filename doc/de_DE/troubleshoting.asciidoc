@@ -1,0 +1,11 @@
+[panel,primary]
+.Je n'ai pas d'informations qui remontent
+--
+Il faut bien indiquer un équipement température et un équipement humidité pour que le calcul du point de rosée puisse se faire.
+On peut rechercher les équipements grace au bouton de recherche de l’équipement
+--
+.le plugin affiche 999.99 dans le champ « valeur » pour le point de givrage, pourquoi ?
+--
+Le calcul du point de givrage n’a de sens que si la température est négative. En cas de température positive, le calcul ne se fait pas et le plugin indique une valeur de 999.999, c’est normal. A l’affichage, la tuile n’indique la valeur du point de givrage que si elle est valide
+--
+
