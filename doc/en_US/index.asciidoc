@@ -10,7 +10,7 @@ include::configuration.asciidoc[]
 include::exemple.asciidoc[]
 
 '''
-==FAQ
+== FAQ
 include::faq.asciidoc[]
 
 '''
