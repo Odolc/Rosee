@@ -1,5 +1,5 @@
 [panel,primary]
-.Je n'ai pas d'informations qui remontent
+. I don't have any information going back
 --
 Il faut bien indiquer un équipement température et un équipement humidité pour que le calcul du point de rosée puisse se faire.
 On peut rechercher les équipements grace au bouton de recherche de l’équipement

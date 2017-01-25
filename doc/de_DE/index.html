@@ -5,7 +5,7 @@
 <!--[if IE]><meta http-equiv="X-UA-Compatible" content="IE=edge"><![endif]-->
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="generator" content="Asciidoctor 1.5.3.dev">
-<title>Description</title>
+<title>Beschreibung</title>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,300italic,400,400italic,600,600italic%7CNoto+Serif:400,400italic,700,700italic%7CDroid+Sans+Mono:400,700">
 <style>
 /* Asciidoctor default stylesheet | MIT License | http://asciidoctor.org */
@@ -415,18 +415,18 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <div id="toc" class="toc2">
 <div id="toctitle">Table des matières</div>
 <ul class="sectlevel1">
-<li><a href="#_description">1. Description</a></li>
-<li><a href="#_configuration">2. Configuration</a></li>
-<li><a href="#_exemple">3. Exemple</a></li>
+<li><a href="#_beschreibung">1. Beschreibung</a></li>
+<li><a href="#_konfiguration">2. Konfiguration</a></li>
+<li><a href="#_beispiel">3. Beispiel</a></li>
 <li><a href="#_faq">4. FAQ</a></li>
 <li><a href="#_troubleshoting">5. Troubleshoting</a></li>
-<li><a href="#_changelog">6. Changelog</a></li>
+<li><a href="#_Änderungsprotokoll">6. Änderungsprotokoll</a></li>
 </ul>
 </div>
 </div>
 <div id="content">
 <div class="sect1">
-<h2 id="_description">1. Description</h2>
+<h2 id="_beschreibung">1. Beschreibung</h2>
 <div class="sectionbody">
 <div class="paragraph">
 <p>Ce plugin permet d&#8217;obtenir le point de rosée pour savoir si l&#8217;herbe sera mouillée le matin, ou bien en hiver savoir si il va falloir gratter le pare-brise.
@@ -436,17 +436,17 @@ Pour fonctionner, on doit indiquer un équipement température et un équipement
 </div>
 </div>
 <div class="sect1">
-<h2 id="_configuration">2. Configuration</h2>
+<h2 id="_konfiguration">2. Konfiguration</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>Le plugin ne comporte pas de configuration générale.
+<p>Das Plugin enthält keine allgemeine Konfiguration.
 Il faut ajouter un équipement pour la température et un équipement pour l’humidité</p>
 </div>
 <hr>
 </div>
 </div>
 <div class="sect1">
-<h2 id="_exemple">3. Exemple</h2>
+<h2 id="_beispiel">3. Beispiel</h2>
 <div class="sectionbody">
 <div class="imageblock">
 <div class="content">
@@ -460,20 +460,27 @@ Il faut ajouter un équipement pour la température et un équipement pour l’h
 <h2 id="_faq">4. FAQ</h2>
 <div class="sectionbody">
 <div class="openblock panel">
-<div class="title">Est-ce que le plugin s&#8217;appuie sur des API tiers ?</div><div class="content">
+<div class="title">Stützt sich das Plugin auf APIs Dritter ?</div><div class="content">
 <div class="paragraph">
 <p>Non, le plugin fait le calcul en interne par rapport à la température et l’humidité extérieure.</p>
 </div>
 </div>
 </div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Was ist der Taupunkt?</p>
+</li>
+</ol>
+</div>
 <div class="openblock">
-<div class="title">C’est quoi le point de rosée ?</div><div class="content">
+<div class="content">
 <div class="paragraph">
 <p>Le point de rosée ou température de rosée est la température la plus basse à laquelle une masse d&#8217;air peut être soumise, à pression et humidité données, sans qu&#8217;il se produise une formation d&#8217;eau liquide par saturation.</p>
 </div>
 <div class="paragraph">
 <p>La notion de point de rosée est une notion de base importante dans le fonctionnement des sécheurs frigorifiques d&#8217;air comprimé et de la condensation atmosphérique créant les hydrométéores. Il est une donnée déterminante dans l&#8217;isolation thermique du bâtiment qui permettra de savoir s&#8217;il y a un risque que l&#8217;humidité ambiante d&#8217;une pièce se condense en traversant les couches successives d&#8217;un mur extérieur, dans lequel chaque couche affiche un gradient de température particulier, dégressif vers l&#8217;extérieur. Le cas échéant, l&#8217;humidité qui se condense peut provoquer la détérioration de la couche dans laquelle le phénomène se produit.
-(Source Wikipédia)</p>
+(Wikipedia Quelle)</p>
 </div>
 </div>
 </div>
@@ -482,7 +489,7 @@ Il faut ajouter un équipement pour la température et un équipement pour l’h
 <div class="paragraph">
 <p>Le point de givrage, connu également comme la température du point givrage ou le point de gelée, est une donnée météorologique calculée à partir de l&#8217;humidité, la pression et la température. Le point de givrage de l&#8217;air est la température à laquelle, tout en gardant inchangées les conditions barométriques courantes, l&#8217;air devient saturé de vapeur d&#8217;eau par rapport à la glace. Le point de givrage est donc l&#8217;équivalent du point de rosée pour la condensation de la vapeur d&#8217;eau directement en cristaux de glace et non en micro-gouttelettes. C&#8217;est le phénomène de déposition, qui survient lorsque le point de givre est atteint, qui créé la gelée blanche.
 Le point de givrage n&#8217;est donc défini que sous le point de congélation. Il coexiste avec le point de rosée à ces températures mais comme la pression de vapeur saturante par rapport à la glace est plus faible, le point de givrage est atteint plus rapidement. La capacité hygrométrique détermine les phénomènes de saturation, plus il fait froid, moins l&#8217;air peut contenir d&#8217;humidité (humidité absolue) et les deux se rejoignent à zéro degré Celsius
-(Source Wikipédia)</p>
+(Wikipedia Quelle)</p>
 </div>
 </div>
 </div>
@@ -493,7 +500,7 @@ Le point de givrage n&#8217;est donc défini que sous le point de congélation. 
 <h2 id="_troubleshoting">5. Troubleshoting</h2>
 <div class="sectionbody">
 <div class="openblock panel">
-<div class="title">Je n&#8217;ai pas d&#8217;informations qui remontent</div><div class="content">
+<div class="title">Ich bekomme keine Informationen, die zurückreichen</div><div class="content">
 <div class="paragraph">
 <p>Il faut bien indiquer un équipement température et un équipement humidité pour que le calcul du point de rosée puisse se faire.
 On peut rechercher les équipements grace au bouton de recherche de l’équipement</p>
@@ -511,12 +518,12 @@ On peut rechercher les équipements grace au bouton de recherche de l’équipem
 </div>
 </div>
 <div class="sect1">
-<h2 id="_changelog">6. Changelog</h2>
+<h2 id="_Änderungsprotokoll">6. Änderungsprotokoll</h2>
 <div class="sectionbody">
 <div class="openblock panel">
 <div class="title">Version 1.0</div><div class="content">
 <div class="paragraph">
-<p>Création du plugin</p>
+<p>Erstellung des Plugins</p>
 </div>
 </div>
 </div>
@@ -530,9 +537,9 @@ On peut rechercher les équipements grace au bouton de recherche de l’équipem
 <div class="openblock">
 <div class="title">Version 1.2</div><div class="content">
 <div class="paragraph">
-<p>Selection de la temperature et de l’humidité
+<p>Auswahl der Temperatur und der Feuchtigkeit
 possibles par un bouton de recherche
-(merci Lunarok)</p>
+(danke Lunarok)</p>
 </div>
 </div>
 </div>
@@ -575,7 +582,7 @@ possibles par un bouton de recherche
 <div class="title">Version 1.5.2</div><div class="content">
 <div class="paragraph">
 <p>correction de bug dans rosee.class.php dans l&#8217;appel de la fonction cron15()
-merci à mika-nt28 et Mika</p>
+Dank mika-nt28 und Mika</p>
 </div>
 </div>
 </div>
