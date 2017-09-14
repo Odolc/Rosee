@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<info>
+    <id>rosee</id>
+    <name>Rosée - Givre</name>
+    <description>Plugin pour obtenir le point de rosée et le point de givre</description>
+    <icon>fa fa-tablet</icon>
+    <licence>AGPL</licence>
+    <author>edualc, Lunarok</author>
+    <installation>Aucune</installation>
+    <require>1.22</require>
+    <version>1.6</version>
+    <category>weather</category>
+</info>
