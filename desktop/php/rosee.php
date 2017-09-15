@@ -91,22 +91,9 @@ $eqLogics = eqLogic::byType('rosee');
             	<div class="form-group">
              		<label class="col-sm-2 control-label" ></label>
               		<div class="col-sm-9">
-<<<<<<< HEAD
-				<?php
-                		//<input type="checkbox" class="eqLogicAttr bootstrapSwitch" data-label-text="{{Activer}}" data-l1key="isEnable" checked/>
-                		//<input type="checkbox" class="eqLogicAttr bootstrapSwitch" data-label-text="{{Visible}}" data-l1key="isVisible" checked/>
-				?>
+
 				<label class="checkbox-inline"><input type="checkbox" class="eqLogicAttr" data-l1key="isEnable" checked/>{{Activer}}</label>
 				<label class="checkbox-inline"><input type="checkbox" class="eqLogicAttr" data-l1key="isVisible" checked/>{{Visible}}</label>
-=======
-
-<?php
-                		//<input type="checkbox" class="eqLogicAttr bootstrapSwitch" data-label-text="{{Activer}}" data-l1key="isEnable" checked/>
-                		//<input type="checkbox" class="eqLogicAttr bootstrapSwitch" data-label-text="{{Visible}}" data-l1key="isVisible" checked/>
-                		
-?>
-
->>>>>>> ec46367747dab7f3be46c0842fa051bd0dd4710d
               		</div>
             	</div>
                             
