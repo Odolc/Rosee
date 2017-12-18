@@ -40,4 +40,4 @@ Dank mika-nt28 und Mika
 --
 .Version 2.0
 --
-mise à jour pour compatibilité V3 Jeedom
+Update für Jeedom V3 Kompatibilität
