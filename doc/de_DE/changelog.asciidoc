@@ -37,3 +37,7 @@ correction de bug dans la prise en compte du seuil d’alerte rosée
 --
 correction de bug dans rosee.class.php dans l'appel de la fonction cron15()
 Dank mika-nt28 und Mika
+--
+.Version 2.0
+--
+Update für Jeedom V3 Kompatibilität
