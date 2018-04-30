@@ -326,7 +326,5 @@ class roseeCmd extends cmd {
     /*     * *********************Methode d'instance************************* */
 	public function execute($_options = null) {
 	}
-
 }
-
 ?>
