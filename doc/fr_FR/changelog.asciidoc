@@ -41,3 +41,7 @@ merci à mika-nt28 et Mika
 .Version 2.0
 --
 mise à jour pour compatibilité V3 Jeedom
+--
+.Version 2.1
+--
+correction affichage point de rosée et givre defaillants
