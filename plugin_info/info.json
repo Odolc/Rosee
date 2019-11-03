@@ -1,11 +1,16 @@
 {
 	"id" : "rosee",
 	"name" : "Rosee - Givre",
+    "description" : "Plugin de calcul de tendance météo basée sur les variations de pression d'un baromètre connecté à Jeedom (local)",
+    "usage" : "",
 	"licence" : "AGPL",
 	"author" : "Claude Metzger",
-	"require" : "1.124.0",
+	"require" : "3.0",
 	"category" : "weather",
-	"hasDependency" : 0,
-	"hasOwnDeamon" : 0
+    "hasDependency" : false,
+    "hasOwnDeamon" : false,
+    "changelog" : "https://jeedom.github.io/documentation/third_plugin/rosee/#language#/changelog",
+	"documentation" : "https://jeedom.github.io/documentation/third_plugin/rosee/#language#/",
+    "language" : ["de_DE","en_US","es_ES","fr_FR","id_ID","it_IT","ru_RU","sp_SP"],
+	"compatibility" : ["miniplus","smart","rpi","docker","diy","v4"]
 }
-
