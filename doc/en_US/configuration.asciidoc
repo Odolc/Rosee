@@ -1,3 +1,0 @@
-
-The plugin does not have general configuration.
-Add an equipment for temperature and one for humidity
