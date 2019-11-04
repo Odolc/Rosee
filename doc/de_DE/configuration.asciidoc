@@ -1,3 +1,0 @@
-
-Das Plugin enthält keine allgemeine Konfiguration.
-Il faut ajouter un équipement pour la température et un équipement pour l’humidité
