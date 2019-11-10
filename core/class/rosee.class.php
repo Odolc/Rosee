@@ -53,74 +53,74 @@ class rosee extends eqLogic {
         $roseeCmd = new roseeCmd();
         $roseeCmd->setName(__('Point de rosée', __FILE__));
         $roseeCmd->setEqLogic_id($this->id);
-	$roseeCmd->setLogicalId('rosee');
+        $roseeCmd->setLogicalId('rosee');
         $roseeCmd->setConfiguration('data', 'rosee_point');
         $roseeCmd->setType('info');
         $roseeCmd->setSubType('numeric');
         $roseeCmd->setUnite('°C');
         $roseeCmd->setEventOnly(1);
-	$roseeCmd->setIsHistorized(0);
-	$roseeCmd->setDisplay('generic_type','DONT');
+        $roseeCmd->setIsHistorized(0);
+        $roseeCmd->setDisplay('generic_type','DONT');
         $roseeCmd->save();
 
         // Ajout d'une commande dans le tableau pour le point de givrage
         $frostCmd = new roseeCmd();
         $frostCmd->setName(__('Point de givrage', __FILE__));
         $frostCmd->setEqLogic_id($this->id);
-	$frostCmd->setLogicalId('givrage');
+        $frostCmd->setLogicalId('givrage');
         $frostCmd->setConfiguration('data', 'frost_point');
         $frostCmd->setType('info');
         $frostCmd->setSubType('numeric');
         $frostCmd->setUnite('°C');
         $frostCmd->setEventOnly(1);
-	$frostCmd->setIsHistorized(0);
-	//$frostCmd->setIsVisible(0);
-	$frostCmd->setDisplay('generic_type','DONT');
+        $frostCmd->setIsHistorized(0);
+        //$frostCmd->setIsVisible(0);
+        $frostCmd->setDisplay('generic_type','DONT');
         $frostCmd->save();
 
 	// Ajout d'une commande dans le tableau pour l'alerte rosée
         $AlertRoseeCmd = new roseeCmd();
         $AlertRoseeCmd->setName(__('Alerte rosée', __FILE__));
         $AlertRoseeCmd->setEqLogic_id($this->id);
-	$AlertRoseeCmd->setLogicalId('alerte_rosee');
+        $AlertRoseeCmd->setLogicalId('alerte_rosee');
         $AlertRoseeCmd->setConfiguration('data', 'alert_r');
         $AlertRoseeCmd->setType('info');
         $AlertRoseeCmd->setSubType('binary');
         $AlertRoseeCmd->setUnite('');
         $AlertRoseeCmd->setEventOnly(1);
-	$AlertRoseeCmd->setIsHistorized(0);
-	//$AlertRoseeCmd->setIsVisible(1);
-	$AlertRoseeCmd->setDisplay('generic_type','DONT');
+        $AlertRoseeCmd->setIsHistorized(0);
+        //$AlertRoseeCmd->setIsVisible(1);
+        $AlertRoseeCmd->setDisplay('generic_type','DONT');
         $AlertRoseeCmd->save();
         
 	// Ajout d'une commande dans le tableau pour l'alerte givrage
         $AlertGivreCmd = new roseeCmd();
         $AlertGivreCmd->setName(__('Alerte givre', __FILE__));
         $AlertGivreCmd->setEqLogic_id($this->id);
-	$AlertGivreCmd->setLogicalId('alerte_givre');
+        $AlertGivreCmd->setLogicalId('alerte_givre');
         $AlertGivreCmd->setConfiguration('data', 'alert_g');
         $AlertGivreCmd->setType('info');
         $AlertGivreCmd->setSubType('binary');
         $AlertGivreCmd->setUnite('');
         $AlertGivreCmd->setEventOnly(1);
-	$AlertGivreCmd->setIsHistorized(0);
-	//$AlertGivreCmd->setIsVisible(1);
-	$AlertGivreCmd->setDisplay('generic_type','DONT');
+        $AlertGivreCmd->setIsHistorized(0);
+        //$AlertGivreCmd->setIsVisible(1);
+        $AlertGivreCmd->setDisplay('generic_type','DONT');
         $AlertGivreCmd->save();
         
         // Ajout d'une commande dans le tableau pour l'humidité absolue
         $AbsHumiCmd = new roseeCmd();
         $AbsHumiCmd->setName(__('Humidité absolue', __FILE__));
         $AbsHumiCmd->setEqLogic_id($this->id);
-	$AbsHumiCmd->setLogicalId('humidite_absolue');
+        $AbsHumiCmd->setLogicalId('humidite_absolue');
         $AbsHumiCmd->setConfiguration('data', 'humidite_a');
         $AbsHumiCmd->setType('info');
         $AbsHumiCmd->setSubType('numeric');
         $AbsHumiCmd->setUnite('g/m3');
         $AbsHumiCmd->setEventOnly(1);
-	$AbsHumiCmd->setIsHistorized(0);
-	//$AbsHumiCmd->setIsVisible(1);
-	$AbsHumiCmd->setDisplay('generic_type','EATHER_HUMIDITY');
+        $AbsHumiCmd->setIsHistorized(0);
+        //$AbsHumiCmd->setIsVisible(1);
+        $AbsHumiCmd->setDisplay('generic_type','EATHER_HUMIDITY');
         $AbsHumiCmd->save();
 	}
 
