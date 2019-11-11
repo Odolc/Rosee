@@ -1,0 +1,52 @@
+# Version 1.0
+
+- Création du plugin
+
+# Version 1.1
+
+- Ajout du point de givre
+
+# Version 1.2
+
+- Selection de la temperature et de l’humidité
+possibles par un bouton de recherche
+(merci Lunarok)
+
+# Version 1.3
+
+- Ajout d’une alerte point de rosée et d’une alerte point de givrage
+
+# Version 1.3.1
+
+- Réglage du seuil d’alerte du point de rosée et du point de givrage à 2°C (dépression du point de rosée)
+
+# Version 1.4
+
+- Seuil d’alerte du point de rosée configurable dans Informations. Valeur par défaut 2°C
+
+# Version 1.5
+
+- gestion des alertes rosée et givre par changement d’état (merci Toregreb)
+
+# Version 1.5.1
+
+- correction de bug dans la prise en compte du seuil d’alerte rosée
+
+# Version 1.5.2
+
+- correction de bug dans rosee.class.php dans l'appel de la fonction cron15()
+merci à mika-nt28 et Mika
+
+# Version 2.0
+
+- mise à jour pour compatibilité V3 Jeedom
+
+# Version 2.1
+
+- correction affichage point de rosée et givre defaillants
+
+# Version 3.0
+
+- Support de PHP 7.3
+- Migration vers font-awesome 5
+- Migration affichage au format core V4
