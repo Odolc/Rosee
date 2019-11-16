@@ -266,6 +266,54 @@ class rosee extends eqLogic {
 	log::add('rosee', 'debug', 'Calcul : Humidite Absolue ' . $humi_a_m3);
 
 	log::add('rosee', 'debug', 'Mise à jour =================================');
+	$cmd = $this->getCmd('info', 'rosee');
+  if(is_object($cmd)) {
+    $cmd->setConfiguration('value', $rosee_point);
+    $cmd->save();
+    $cmd->event($rosee_point);
+    $cmd->setIsVisible($visible_Rosee);
+    log::add('rosee', 'debug', 'Mise à jour : Rosée ' . $rosee_point);
+  }
+  $cmd = $this->getCmd('info', 'givrage');
+  if(is_object($cmd)) {
+    $cmd->setConfiguration('value', $frost_point);
+    $cmd->save();
+    $cmd->event($frost_point);
+    $cmd->setIsVisible($visible_Frost);
+    log::add('rosee', 'debug', 'Mise à jour : Givrage ' . $frost_point);
+  }
+  $cmd = $this->getCmd('info', 'humidite_absolue');
+  if(is_object($cmd)) {
+    $cmd->setConfiguration('value', $humi_a_m3);
+    $cmd->save();
+    $cmd->event($humi_a_m3);
+    log::add('rosee', 'debug', 'Mise à jour : Humidite Absolue ' . $humi_a_m3);
+  }
+  $cmd = $this->getCmd('info', 'alerte_rosee');
+  if(is_object($cmd)) {
+    $old_alert_r = $cmd->execCmd();
+    log::add('rosee', 'debug', 'Mise à jour : old Alerte rosée ' . $old_alert_r);
+    $cmd->setConfiguration('value', $alert_r);
+    $cmd->save();
+    if ($alert_r!=$old_alert_r) {
+      $cmd->setCollectDate('');
+      $cmd->event($alert_r);
+    }
+    log::add('rosee', 'debug', 'Mise à jour : Alerte rosée ' . $alert_r);
+  }
+  $cmd = $this->getCmd('info', 'alerte_givre');
+  if(is_object($cmd)) {
+    $old_alert_g = $cmd->execCmd();
+    log::add('rosee', 'debug', 'Mise à jour : old Alerte givrage ' . $old_alert_g);
+    $cmd->setConfiguration('value', $alert_g);
+    $cmd->save();
+    if ($alert_g!=$old_alert_g) {
+      $cmd->setCollectDate('');
+      $cmd->event($alert_g);
+    }
+    log::add('rosee', 'debug', 'Mise à jour : Alerte givrage ' . $alert_g);
+  }
+	/*
 	foreach ($this->getCmd() as $cmd) {
 		if ($cmd->getConfiguration('data')=="rosee_point"){
 			$cmd->setConfiguration('value', $rosee_point);
@@ -313,7 +361,7 @@ class rosee extends eqLogic {
 			}
 			log::add('rosee', 'debug', 'Mise à jour : Alerte givrage ' . $alert_g);
 		}
-	}
+	*/
         return ;
     }
 }
