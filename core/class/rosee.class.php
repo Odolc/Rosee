@@ -267,6 +267,7 @@ class rosee extends eqLogic {
             log::add('rosee', 'debug', '======== CALCUL DU POINT DE GIVRAGE =======');
             log::add('rosee', 'debug', 'Point de Givrage :' . $frost_point.' °C');
 
+
         // Calcul de l'alerte givrage en fonction du seuil d'alerte
             if ($visible_Frost == 1) {
                 if (($temperature - $frost_point) <= $dpr) {
