@@ -223,14 +223,15 @@ class rosee extends eqLogic {
             $rosee = $lambda * ($Terme1 + $Terme2) / ($beta - $Terme1 - $Terme2);
             $rosee_point = round(($rosee), 1);
             // Calcul visibilité Alerte
-                /*Désactivation de la fonction visibilité
+                /*Désactivation de la fonction visibilité*/
                     if ($rosee_point >= 0.0) {
                         $visible_Rosee = 1;
                     } else {
                         $visible_Rosee = 0;
-                    }*/
+                    }
             log::add('rosee', 'debug', '========= CALCUL DU POINT DE ROSEE ========');
             log::add('rosee', 'debug', 'Point de Rosée : ' . $rosee_point);
+            log::add('rosee', 'debug', 'Visibilité Point de Rosée : ' . $visible_Rosee);
         
         // Calcul de l'alerte rosée en fonction du seuil d'alerte
             if ($visible_Rosee == 1) {
@@ -258,15 +259,15 @@ class rosee extends eqLogic {
             $frost = $frost_kelvin -273.15;
             $frost_point = round(($frost), 1);
             // Calcul visibilité Alerte
-                 /*Désactivation de la fonction visibilité
+                 /*Désactivation de la fonction visibilité*/
                     if($frost_point < 0.0) {
                         $visible_Frost = 1;
                     } else {
                         $visible_Frost = 0;
-                    }*/
+                    }
             log::add('rosee', 'debug', '======== CALCUL DU POINT DE GIVRAGE =======');
             log::add('rosee', 'debug', 'Point de Givrage :' . $frost_point.' °C');
-
+            log::add('rosee', 'debug', 'Visibilité Point de Givrage : ' . $visible_Frost);
 
         // Calcul de l'alerte givrage en fonction du seuil d'alerte
             if ($visible_Frost == 1) {
