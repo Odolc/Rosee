@@ -77,3 +77,7 @@ possibles par un bouton de recherche
 - Mise à jour de la documentation
 
 >*Remarque : Il est conseillé de supprimer le plugin et ensuite le réinstaller*
+
+# Version 3.3
+
+- Correction Bug
