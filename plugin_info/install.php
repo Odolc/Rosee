@@ -20,6 +20,8 @@ require_once dirname(__FILE__) . '/../../../core/php/core.inc.php';
 
 
 function rosee_install() {
+    config::save('functionality::cron5::enable', 1, 'rosee');
+    config::save('functionality::cron30::enable', 0, 'rosee');
     $cron = cron::byClassAndFunction('rosee', 'pull');
     if (is_object($cron)) {
         $cron->remove();
@@ -27,6 +29,10 @@ function rosee_install() {
 }
 
 function rosee_update() {
+    if (config::byKey('functionality::cron5::enable', 'rosee', -1) == -1)
+        config::save('functionality::cron5::enable', 1, 'rosee');
+    if (config::byKey('functionality::cron30::enable', 'rosee', -1) == -1)
+        config::save('functionality::cron30::enable', 0, 'rosee');
     $cron = cron::byClassAndFunction('rosee', 'pull');
     if (is_object($cron)) {
         $cron->remove();
