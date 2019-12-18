@@ -134,8 +134,7 @@ class rosee extends eqLogic {
             $AbsHumiCmd->save();
 	}
 
-	public function postSave()
-    {
+	public function postSave(){
         $refresh = $this->getCmd(null, 'refresh');
         if (!is_object($refresh)) {
             $refresh = new roseeCmd();
@@ -291,7 +290,7 @@ class rosee extends eqLogic {
             $p = 1.0 / $v;                                                          // Poids spécifique en kg / m3
             $humi_a_m3 = 1000.0 * $humi_a * $p;                                     // Humidité absolue en gr / m3
             $humi_a_m3 = round(($humi_a_m3), 1);
-                log::add('rosee', 'debug', '========= CALCUL HUMIDITE ABSOLUE =========');
+                  
                 log::add('rosee', 'debug', 'terme_pvs1 : ' . $terme_pvs1);
                 log::add('rosee', 'debug', 'pvs : ' . $pvs);
                 log::add('rosee', 'debug', 'pv : ' . $pv);

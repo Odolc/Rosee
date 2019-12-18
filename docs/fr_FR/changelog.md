@@ -6,61 +6,9 @@ description: Ce plugin permet d'obtenir le point de rosée pour savoir si l'herb
 ## Changelog
 >*Remarque : en cas de mise à jour non listée ici, c'est que celle-ci ne comporte que des changements mineurs du type documentation ou corrections de bugs mineurs.*
 
-# Version 1.0
+# Version 3.3
 
-- Création du plugin
-
-# Version 1.1
-
-- Ajout du point de givre
-
-# Version 1.2
-
-- Selection de la temperature et de l’humidité
-possibles par un bouton de recherche
-(merci Lunarok)
-
-# Version 1.3
-
-- Ajout d’une alerte point de rosée et d’une alerte point de givrage
-
-# Version 1.3.1
-
-- Réglage du seuil d’alerte du point de rosée et du point de givrage à 2°C (dépression du point de rosée)
-
-# Version 1.4
-
-- Seuil d’alerte du point de rosée configurable dans Informations. Valeur par défaut 2°C
-
-# Version 1.5
-
-- Gestion des alertes rosée et givre par changement d’état (merci Toregreb)
-
-# Version 1.5.1
-
-- Correction de bug dans la prise en compte du seuil d’alerte rosée
-
-# Version 1.5.2
-
-- Correction de bug dans rosee.class.php dans l'appel de la fonction cron15() (merci à mika-nt28 et Mika)
-
-# Version 2.0
-
-- Mise à jour pour compatibilité V3 Jeedom
-
-# Version 2.1
-
-- Correction affichage point de rosée et givre defaillants
-
-# Version 3.0
-
-- Support de PHP 7.3
-- Migration vers font-awesome 5
-- Migration affichage au format core V4
-
-# Version 3.1
-
-- La recherche des cmd pour mise à jour ne se fait plus par getConfiguration('data') mais par leur logicalId. Les cmd perdent leur data de configuration. (merci à  jpty)
+- Correction Bug
 
 # Version 3.2
 
@@ -78,6 +26,56 @@ possibles par un bouton de recherche
 
 >*Remarque : Il est conseillé de supprimer le plugin et ensuite le réinstaller*
 
-# Version 3.3
+# Version 3.1
 
-- Correction Bug
+- La recherche des cmd pour mise à jour ne se fait plus par getConfiguration('data') mais par leur logicalId. Les cmd perdent leur data de configuration. (merci à  jpty)
+
+# Version 3.0
+
+- Support de PHP 7.3
+- Migration vers font-awesome 5
+- Migration affichage au format core V4
+
+# Version 2.1
+
+- Correction affichage point de rosée et givre defaillants
+
+# Version 2.0
+
+- Mise à jour pour compatibilité V3 Jeedom
+
+# Version 1.5.2
+
+- Correction de bug dans rosee.class.php dans l'appel de la fonction cron15() (merci à mika-nt28 et Mika)
+
+# Version 1.5.1
+
+- Correction de bug dans la prise en compte du seuil d’alerte rosée
+
+# Version 1.5
+
+- Gestion des alertes rosée et givre par changement d’état (merci Toregreb)
+
+# Version 1.4
+
+- Seuil d’alerte du point de rosée configurable dans Informations. Valeur par défaut 2°C
+
+# Version 1.3.1
+
+- Réglage du seuil d’alerte du point de rosée et du point de givrage à 2°C (dépression du point de rosée)
+
+# Version 1.3
+
+- Ajout d’une alerte point de rosée et d’une alerte point de givrage
+
+# Version 1.2
+
+- Selection de la temperature et de l’humidité (possibles par un bouton de recherche) (merci Lunarok)
+
+# Version 1.1
+
+- Ajout du point de givre
+
+# Version 1.0
+
+- Création du plugin
