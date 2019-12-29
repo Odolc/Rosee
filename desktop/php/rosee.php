@@ -18,7 +18,7 @@ $eqLogics = eqLogic::byType($plugin->getId());
 			</div>
 		</div>
 		<legend><i class="fas fa-umbrella"></i> {{Mes Points de Rosée}}</legend>
-		<input class="form-control" placeholder="{{Rechercher}}" id="in_searchEqlogic" />
+        <input class="form-control" placeholder="{{Rechercher}}" id="in_searchEqlogic" />
 		<div class="eqLogicThumbnailContainer">
 			<?php
 			foreach ($eqLogics as $eqLogic) {
@@ -36,12 +36,9 @@ $eqLogics = eqLogic::byType($plugin->getId());
 	<div class="col-xs-12 eqLogic" style="display: none;">
 		<div class="input-group pull-right" style="display:inline-flex">
 			<span class="input-group-btn">
-				<a class="btn btn-default btn-sm eqLogicAction roundedLeft" data-action="configure"><i class="fas fa-cogs"></i> {{Configuration avancée}}
-				</a>
-                <a class="btn btn-default btn-sm eqLogicAction" data-action="copy"><i class="fas fa-copy"></i> {{Dupliquer}}
-				</a>
-                <a class="btn btn-sm btn-success eqLogicAction" data-action="save"><i class="fas fa-check-circle"></i> {{Sauvegarder}}
-				</a>
+				<a class="btn btn-default btn-sm eqLogicAction roundedLeft" data-action="configure"><i class="fas fa-cogs"></i> {{Configuration avancée}}</a>
+                <a class="btn btn-default btn-sm eqLogicAction" data-action="copy"><i class="fas fa-copy"></i> {{Dupliquer}}</a>
+                <a class="btn btn-sm btn-success eqLogicAction" data-action="save"><i class="fas fa-check-circle"></i> {{Sauvegarder}}</a>
                 <a class="btn btn-danger btn-sm eqLogicAction roundedRight" data-action="remove"><i class="fas fa-minus-circle"></i> {{Supprimer}}</a>
 			</span>
 		</div>
@@ -71,7 +68,7 @@ $eqLogics = eqLogic::byType($plugin->getId());
 									<option value="">{{Aucun}}</option>
 									<?php
 									foreach (jeeObject::all() as $object) {
-									 echo '<option value="' . $object->getId() . '">' . $object->getName() . '</option>';
+                                        echo '<option value="' . $object->getId() . '">' . $object->getName() . '</option>';
 									}
 									?>
 							 </select>
@@ -92,8 +89,8 @@ $eqLogics = eqLogic::byType($plugin->getId());
 						<div class="form-group">
 							<label class="col-sm-2 control-label"></label>
 							<div class="col-sm-10">
-							<label class="checkbox-inline"><input type="checkbox" class="eqLogicAttr" data-l1key="isEnable" checked/>{{Activer}}</label>
-							<label class="checkbox-inline"><input type="checkbox" class="eqLogicAttr" data-l1key="isVisible" checked/>{{Visible}}</label>
+                                <label class="checkbox-inline"><input type="checkbox" class="eqLogicAttr" data-l1key="isEnable" checked/>{{Activer}}</label>
+                                <label class="checkbox-inline"><input type="checkbox" class="eqLogicAttr" data-l1key="isVisible" checked/>{{Visible}}</label>
 							</div>
 						</div>
 					</fieldset>
@@ -157,7 +154,7 @@ $eqLogics = eqLogic::byType($plugin->getId());
 								<sup><i class="fas fa-question-circle" title="{{Seuil de déclenchement de l'alerte rosée, 2°C par défaut (dépression du point de rosée T°-Tr°) A ajuster en fonction des observations locales.}}"></i></sup>
 							</label>
 							<div class="col-md-2">
-								<input type="text" class="eqLogicAttr form-control" data-l1key="configuration" data-l2key="DPR" placeholder="{{2}}">
+                                <input type="text" class="eqLogicAttr form-control" data-l1key="configuration" data-l2key="DPR" placeholder="{{2}}">
 							</div>
 						</div>
 					</fieldset>
