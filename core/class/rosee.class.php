@@ -221,32 +221,38 @@ class rosee extends eqLogic {
             $Terme2 = ($beta * $temperature) / ($lambda + $temperature);
             $rosee = $lambda * ($Terme1 + $Terme2) / ($beta - $Terme1 - $Terme2);
             $rosee_point = round(($rosee), 1);
-            // Calcul visibilité Alerte
-                /*Désactivation de la fonction visibilité*/
+        
+            // Calcul visibilité Alerte Point de rosée
                     if ($rosee_point >= 0.0) {
                         $visible_Rosee = 1;
                     } else {
                         $visible_Rosee = 0;
                     }
+
             log::add('rosee', 'debug', '========= CALCUL DU POINT DE ROSEE ========');
             log::add('rosee', 'debug', 'Point de Rosée : ' . $rosee_point);
             log::add('rosee', 'debug', 'Visibilité Point de Rosée : ' . $visible_Rosee);
         
         // Calcul de l'alerte rosée en fonction du seuil d'alerte
+            $frost_alert_rosee = $temperature - $rosee_point;
+                log::add('rosee', 'debug', 'Calcul point de rosee (Température - point de Rosée) : ' . $frost_alert_rosee );
+        
             if ($visible_Rosee == 1) {
-                if (($temperature - $rosee_point) <= $dpr) {
+                if (($frost_alert_rosee) <= $dpr) {
                     $alert_r = 1;
+                    log::add('rosee', 'debug', 'RESULTAT Calcul point de rosee (Calcul point de Rosée  <= Seuil DPR)');
                 } else {
                     $alert_r = 0;
+                    log::add('rosee', 'debug', 'RESULTAT Calcul point de rosee (Calcul point de Rosée  > Seuil DPR)');
                 }
             } else {
                 $alert_r = 0;
+                log::add('rosee', 'debug', 'AUCUN Calcul point de Rosée car Visibilité Point de Rosée = 0');
             }
 		  log::add('rosee', 'debug', 'Etat alerte rosée ' . $alert_r);
         
         
 		/* calcul du point de givrage
-			Point de givrage calculé uniquement si la température extérieure est négative
 		*/
             $temp_kelvin = $temperature + 273.15;
             $rosee_kelvin = $rosee + 273.15;
@@ -257,28 +263,36 @@ class rosee extends eqLogic {
             $frost_kelvin = $frost_kelvin + $rosee_kelvin - $temp_kelvin;
             $frost = $frost_kelvin -273.15;
             $frost_point = round(($frost), 1);
-            // Calcul visibilité Alerte
-                 /*Désactivation de la fonction visibilité*/
+        
+            // Calcul visibilité Alerte Point de Givrage
                     if($frost_point < 0.0) {
                         $visible_Frost = 1;
                     } else {
                         $visible_Frost = 0;
                     }
+
             log::add('rosee', 'debug', '======== CALCUL DU POINT DE GIVRAGE =======');
             log::add('rosee', 'debug', 'Point de Givrage :' . $frost_point.' °C');
             log::add('rosee', 'debug', 'Visibilité Point de Givrage : ' . $visible_Frost);
 
         // Calcul de l'alerte givrage en fonction du seuil d'alerte
+            $frost_alert_givrage = $temperature - $frost_point;
+                log::add('rosee', 'debug', 'Calcul point de givrage (Température - point de givrage) : ' . $frost_alert_givrage);
+        
             if ($visible_Frost == 1) {
-                if (($temperature - $frost_point) <= $dpr) {
+                if (($frost_alert_givrage) <= $dpr) {
                     $alert_g = 1;
+                    log::add('rosee', 'debug', 'RESULTAT Calcul point de givrage (Calcul point de givrage  <= Seuil DPR)');
                 } else {
                     $alert_g = 0;
+                    log::add('rosee', 'debug', 'RESULTAT Calcul point de givrage (Calcul point de givrage  > Seuil DPR)');
                 }
             } else {
                 $alert_g = 0;
+                log::add('rosee', 'debug', 'AUCUN Calcul point de givrage car Visibilité Point de Givrage = 0');
             }
-		  log::add('rosee', 'debug', 'Etat alerte gel : ' . $alert_g);
+        
+            log::add('rosee', 'debug', 'Etat alerte gel : ' . $alert_g);
 
 		// Calcul de l'humidité absolue
             $terme_pvs1 = 2.7877 + (7.625 * $temperature) / (241.6 + $temperature);
@@ -290,7 +304,9 @@ class rosee extends eqLogic {
             $p = 1.0 / $v;                                                          // Poids spécifique en kg / m3
             $humi_a_m3 = 1000.0 * $humi_a * $p;                                     // Humidité absolue en gr / m3
             $humi_a_m3 = round(($humi_a_m3), 1);
-                  
+                
+
+                log::add('rosee', 'debug', '========= CALCUL DE L HUMIDITE ABSOLUE ========');
                 log::add('rosee', 'debug', 'terme_pvs1 : ' . $terme_pvs1);
                 log::add('rosee', 'debug', 'pvs : ' . $pvs);
                 log::add('rosee', 'debug', 'pv : ' . $pv);
@@ -300,7 +316,8 @@ class rosee extends eqLogic {
                 log::add('rosee', 'debug', 'p : ' . $p);
                 log::add('rosee', 'debug', 'Humidite Absolue : ' . $humi_a_m3);
 
-		log::add('rosee', 'debug', '=============== MISE A JOUR ===============');
+
+        log::add('rosee', 'debug', '=============== MISE A JOUR ===============');
 
 		$cmd = $this->getCmd('info', 'alerte_givre');
 		if (is_object($cmd)) {
