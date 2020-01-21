@@ -1,7 +1,7 @@
 {
   "id" : "rosee",
   "name" : "Rosee - Givre",
-  "description" : "Plugin pour obtenir le point de rosée, le point de givrage et l'humidité absolue. Le point de givrage ne se calcule et ne s'affiche que dans les cas de températures négatives. Il est utile pour vérifier la formation de givre",
+  "description" : "Plugin pour obtenir le point de rosée, le point de givrage et l'humidité absolue.",
   "usage" : "Il faut indiquer dans les champs Temperature et Humidité les équipements Jeedom Les boutons de recherche des équipements permettent de les rechercher. Pour l'humidité absolue, on peut indiquer également une pression barométrique, sinon une valeur par défaut est prise",
   "licence" : "AGPL",
   "author" : "Claude Metzger",
