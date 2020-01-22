@@ -6,6 +6,11 @@ description: Ce plugin permet d'obtenir le point de rosée pour savoir si l'herb
 ## Changelog
 >*Remarque : en cas de mise à jour non listée ici, c'est que celle-ci ne comporte que des changements mineurs du type documentation ou corrections de bugs mineurs.*
 
+# Version 3.3.2
+
+- Ajout de log supplémentaire en mode DEBUG
+- Suppression visibilité pour le calcul du point de rosée et du point de givrage
+
 # Version 3.3.1
 
 - Correction Documentation
